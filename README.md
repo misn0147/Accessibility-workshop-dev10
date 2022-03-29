@@ -2,8 +2,9 @@
 Build an accessible form
 
 ### Accessibility Checklist for Forms: 
+[] testing
 
-- [] all inputs in a form are associated with a corresponding label
+[] all inputs in a form are associated with a corresponding label
 - [] use fieldset to break up longer forms 
 - [] inputs autocomplete where appropriate
 - [] Errors are displayed in a list above the form after submission
