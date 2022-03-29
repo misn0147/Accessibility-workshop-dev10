@@ -5,7 +5,7 @@ Build an accessible form
 [] testing
 
 [] all inputs in a form are associated with a corresponding label
-- [] use fieldset to break up longer forms 
+- [ ] use fieldset to break up longer forms 
 - [] inputs autocomplete where appropriate
 - [] Errors are displayed in a list above the form after submission
 - [] Associate input error messaging with input it corresponds to
