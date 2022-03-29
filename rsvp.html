@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP</title>
+    <!--link to CSS Stylesheet-->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-toggle hamburger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="wedding.html">Wedding</a></li>
+                <li><a href="rsvp.html">RSVP</a></li>
+              </ul>
+            </nav>
+          </div>
+    </header>
+    <section class="rsvp">
+        <div>
+            <h2>RSVP</h2>
+            <p>We hope to celebrate this special day with you. Please let us know if you will be attending at least 1 month in advance.</p>
+        </div>
+        
+        <form action="">
+            <fieldset>
+                <label for="name"> Guest Name</label>
+                    <input required type="text" id="name" name="fullname">
+                <label for="attendance">Will you be joining us?</label>
+                    <select required name="attendance" id="attendance">
+                        <option value="empty"></option>
+                        <option value="Accept">Accept</option>
+                        <option value="Decline">Decline</option>
+                    </select>
+                
+                <label for="entree">Select your entree</label>
+                    <select required name="entree" id="entree">
+                        <option value="empty"></option>
+                        <option value="fish">Fish</option>
+                        <option value="beef">Beef</option>
+                        <option value="vegitarian">Vegitarian</option>
+                    </select>
+                
+                <label for="email">Your email</label>
+                    <input type="email" id="email" name="email">
+                
+                <label for="address">Your address</label> 
+                    <input required type="text" name="address" id="address">
+                
+                <label for="city">Your city</label> 
+                    <input required type="text" name="city" id="city">
+               
+                <label for="province">Your province</label>
+                    <input required type="text" name="province" id="province">
+                
+                <label for="address">Your country </label>
+                    <input required type="text" name="address" id="address">
+             
+                <label for="postal-code">Your postal code</label>
+                    <input required type="text" name="postal-code" id="postal-code" pattern="[a-z, A-Z, 0-9]" title="postal code must include letters and numbers without spaces example M6J3T2" maxlength="6">
+               
+            </fieldset>
+            <hr>
+            <fieldset>
+                <label for="guest">Will you be bringing a plus one?</label>
+                    <select required name="guest" id="guest">
+                        <option value="empty"></option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                
+                <label for="guest-name">Name of guest </label>
+                    <input type="text" id="guest-name" name="guest-name">
+            
+                <label for="guest-entree">Select your guest's entree </label>
+                    <select name="guest-entree" id="guest-entree">
+                        <option value="empty"></option>
+                        <option value="fish">Fish</option>
+                        <option value="beef">Beef</option>
+                        <option value="vegitarian">Vegitarian</option>
+                    </select>
+               
+            </fieldset>
+            <button type="submit">RSVP</button>
+        </form>
+    </section>
+    <footer>
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
