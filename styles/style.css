@@ -1,0 +1,401 @@
+/*RESET*/
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    max-width:100%;
+}
+*::before, *::after{
+    box-sizing: border-box;
+  }
+/*General Styles*/
+html{
+    font-size:62.5%;
+}
+body{
+    font-size:1.6rem;
+    line-height:1.8;
+    font-family: 'Alice', serif;
+    color:#000;
+}
+h1, h2, h3{
+    font-family: 'Sacramento', cursive;
+}
+h1{
+    font-size:9rem;
+    color:#efe9e7;
+    margin-left:20%;
+}
+h2{
+    font-size:3.5rem;
+}
+h3{
+    font-size:3rem;
+}
+a{
+    text-decoration: none;
+    font-family: 'Alice', serif;
+    color: #efe9e7;
+}
+section{
+    padding:4% 0;
+}
+
+/******************************************************* SLIDE IN MENU STYLES ************************************************/
+
+.container{
+    position: relative;
+    overflow: hidden;
+    height:5vh;
+    background-color:#000;
+  }
+  .nav-toggle{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+  }
+  .hamburger {
+    width: 30px;
+    height: 15px;
+  }
+  .hamburger span {
+    background:#efe9e7;
+    display: block;
+    position: absolute;
+    height: 2px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all .4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    -moz-transition: all .4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    -o-transition: all .4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: all .4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    opacity: 1;
+    width: 100%;
+    right: 0;
+  }
+  .hamburger span:nth-child(1) {
+    top: 0px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 6px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 12px;
+  }
+  .hamburger.open span:nth-child(1) {
+    top: 3px;
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+    width: 50%;
+  }
+  .hamburger.open span:nth-child(3) {
+    top: 9px;
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    width: 50%;
+  }
+  
+  nav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translate3d(100%, 0, 0);
+    transition:  all .25s ease-out;
+    background: rgba(0,0,0,0.85);
+    width: 50%;
+    height: 100%;
+    padding: 50px 30px;
+    display: table;
+    text-align: center;
+  }
+  .nav-open nav{
+    transform: translate3d(0, 0, 0);
+    transition:  all .4s ease;
+  }
+  nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  nav li{
+    transform: translate3d(40px, 0, 0);
+    opacity: 0;
+    transition:  all .4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    margin: 15px 0;
+  }
+  .nav-open nav li {
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .nav-open nav li:nth-child(1) {
+    transition-delay: 200ms;
+  }
+  .nav-open nav li:nth-child(2) {
+    transition-delay: 300ms;
+  }
+  .nav-open nav li:nth-child(3) {
+    transition-delay: 400ms;
+  }
+  .nav-open nav li:nth-child(4) {
+    transition-delay: 500ms;
+  }
+  
+  nav a{
+    font-size: 2.5rem;
+    display: block;
+  }
+
+/******************************************************* HOME PAGES STYLES ************************************************/
+#home-page{
+    height:95vh;
+    background-image: url('../images//willowheader.jpg');
+    background-size:cover;
+    background-position: center; 
+    display:flex;
+    align-items: center;
+}
+#home-page div{
+    height:95vh;
+    width:100%;
+    background-color:rgba(0,0,0,0.5);
+    display:flex;
+    align-items: center;
+   
+}
+/******************************************************* WEDDING PAGES STYLES ************************************************/
+.story{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.story h3{
+    text-align:center;
+    margin-top:3%;
+}
+.left{
+    width:40%;
+}
+.left, .right{
+    display:flex;
+    justify-content: center;
+}
+.left img{
+    width:62%;
+}
+.right{
+    width:50%;
+}
+.right .text{
+    width:80%;
+}
+.top{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    color:#efe9e7;
+    background-color:#000;
+    height:40vh;
+}
+.events{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.event{
+    width:30%;
+    margin:1% 0;
+}
+.event hr{
+    width:100%;
+}
+
+
+/******************************************************* RSVP PAGE STYLES ************************************************/
+.rsvp{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#000 70%, #fff 0%);
+}
+.rsvp div{
+    text-align:center;
+    width:30%;
+    color:#efe9e7;
+}
+/*Form Styles*/
+form{
+    margin-top:5%;
+    line-height:2;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#efe9e7;
+    width:30%;
+    padding:2% 0;
+}
+form fieldset{
+    display:flex;
+    flex-direction: column;
+    width:80%;
+    border:none;
+   
+}
+input, select{
+    padding:1% 0;
+    border: 2px solid #000;
+}
+button{
+    margin-top:3%;
+    padding:0.5% 4%;
+    letter-spacing:4px;
+    border:2px solid #0f1719;
+    color:#000;
+    transition: 2s;
+}
+button:hover{
+    background:#000;
+    color:#efe9e7;
+}
+hr{
+    width:25%;
+    background-color:#000;
+    margin:3% 0;
+    height:4px;
+}
+
+/******************************************************* RESPONSIVE STYLES ************************************************/
+/*phone screens*/
+@media(max-width: 680px){
+    /*menu styles*/ 
+    .hamburger span:nth-child(1) {
+        top: 5px;
+      }
+      .hamburger span:nth-child(2) {
+        top: 10px;
+      }
+      .hamburger span:nth-child(3) {
+        top: 15px;
+      }
+      nav{
+          width:100%;
+          background: rgba(0,0,0,0.95);
+      }
+      .hamburger.open span:nth-child(1) {
+        top: 6px;
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        transform: rotate(30deg);
+        width: 50%;
+      }
+      .hamburger.open span:nth-child(3) {
+        top: 14px;
+        -webkit-transform: rotate(-30deg);
+        -moz-transform: rotate(-30deg);
+        -o-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+        width: 50%;
+      }
+      /*Home page styles*/
+      h1{
+          margin:0 auto;
+          text-align:center;
+        }
+    /*wedding page styles*/
+    .story{
+        flex-direction:column;
+    }
+    .left img{
+        width:100%;
+    }
+    .left, .right{
+        margin:2% 0;
+        width:60%;
+    }
+    .right .text{
+        width:100%;
+    }
+    .event{
+        width:60%;
+    }
+}
+
+/*tablet*/
+@media(max-width:800px){
+    /*navigation styles*/
+    nav{
+        width:60%;
+        background: rgba(0,0,0,0.95);
+    }
+    /*wedding page styles*/
+    .right .text{
+        width:95%;
+        line-height:1.4;
+    }
+      /*Form page Styles*/
+      .rsvp div{
+        width:60%;
+    }
+    form{
+        width:60%;
+    }
+    
+}
+@media(max-width:991px){
+    h1{
+        margin-left:10%;
+    }
+    /*wedding page styles*/
+    .left img{
+        width:100%;
+    }
+    .event{
+        width:40%;
+    }
+     /*Form page Styles*/
+     .rsvp div{
+        width:40%;
+    }
+    form{
+        width:40%;
+    }
+}
+
+/*laptop*/
+@media(max-width: 1024px){
+  
+    h1{
+        margin-left:12%;
+    }
+     /*wedding page styles*/
+     .left img{
+        width:90%;
+    }
+    .right .text{
+        line-height:1.7;
+    }
+}
+
+/*desktop*/
+@media(max-width:1200px){
+         /*navigation styles*/
+         .container{
+            height:7vh;
+        }
+}
