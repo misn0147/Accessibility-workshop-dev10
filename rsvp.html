@@ -33,6 +33,7 @@
         
         <form action="">
             <fieldset>
+                <legend>Will you be joining us?</legend>
                 <label for="name"> Guest Name</label>
                     <input required type="text" id="name" name="fullname">
                 <label for="attendance">Will you be joining us?</label>
@@ -62,15 +63,17 @@
                 <label for="province">Your province</label>
                     <input required type="text" name="province" id="province">
                 
-                <label for="address">Your country </label>
-                    <input required type="text" name="address" id="address">
+                <label for="country">Your country </label>
+                    <input required type="text" name="address" id="country">
              
                 <label for="postal-code">Your postal code</label>
+                <!--if you are adding a pattern attribute to restrict user input you should also add a title attribute to give the user insight into what the input is expecting.-->
                     <input required type="text" name="postal-code" id="postal-code" pattern="[a-z, A-Z, 0-9]" title="postal code must include letters and numbers without spaces example M6J3T2" maxlength="6">
                
             </fieldset>
             <hr>
             <fieldset>
+                <legend>Guest Information</legend>
                 <label for="guest">Will you be bringing a plus one?</label>
                     <select required name="guest" id="guest">
                         <option value="empty"></option>
@@ -90,7 +93,8 @@
                     </select>
                
             </fieldset>
-            <button type="submit">RSVP</button>
+            <!--Add ARIA labels as a special instruction for screen readers-->
+            <button type="submit" aria-label="Complete RSVP">RSVP</button>
         </form>
     </section>
     <footer>

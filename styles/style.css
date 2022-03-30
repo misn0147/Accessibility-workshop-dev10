@@ -37,6 +37,14 @@ a{
     font-family: 'Alice', serif;
     color: #efe9e7;
 }
+a:hover{
+    color: #552f18;
+}
+/* helps give visual clues for keyboard navigation*/ 
+a:focus {
+    outline: 3px solid grey;
+    border-color: transparent;
+  }
 section{
     padding:4% 0;
 }
@@ -259,6 +267,11 @@ form fieldset{
 input, select{
     padding:1% 0;
     border: 2px solid #000;
+}
+/*example of focus styling*/
+input:focus, select:focus {
+    outline: 4px solid #552f18;
+    border-color: transparent;
 }
 button{
     margin-top:3%;

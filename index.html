@@ -15,12 +15,14 @@
 <body>
     <header>
         <div class="container">
-            <div class="nav-toggle hamburger">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-            <nav>
+            <!--insert the information to let screen reader know here has a menu bar, so they can click and open it up.-->
+            <div class="nav-toggle hamburger"  aria-label=”Open the navigation”>
+                <!--aria-hidden=”true” is for hiding the hamburger icon for screen reader, so the browser will skip this icon. Why? Because we have the aria-label, which will tell the screen reader that this is for opening the menu! -->
+                  <span aria-hidden=”true”></span>
+                  <span aria-hidden=”true”></span>
+                  <span aria-hidden=”true”></span>
+            </div>
+            <nav role="navigation" aria-label="Main menu">
               <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="wedding.html">Wedding</a></li>
