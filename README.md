@@ -16,5 +16,3 @@ Build an accessible form
 - [ ] all attributes are filled in and filled in correctly
 - [ ] title attribute is used where necessary
 
-### Other Checklist Items to walk through (time permitting)
-- [ ] 
